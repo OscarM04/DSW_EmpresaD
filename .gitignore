@@ -42,6 +42,7 @@ backend\.idea
 *.tar.gz
 *.rar
 *.iml
+*.class
 
 # misc
 /.sass-cache

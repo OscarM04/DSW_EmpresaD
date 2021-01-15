@@ -32,21 +32,4 @@ public class DaoUsuario extends Dao<Usuario> {
         }
         return resultado;
     }
-
-    public List<Usuario> listarAnalistas(){
-        List<Usuario> resultado = null;
-        _em = _handler.getSession();
-        try{
-            _handler.beginTransaction();
-            TypedQuery<Usuario> usuario = this._em.createNamedQuery("obtener_analistas",Usuario.class);
-            resultado = usuario.getResultList();
-            _em.flush();
-            _em.clear();
-            _handler.finishTransaction();
-        }
-        catch ( Exception e){
-            String problema = e.getMessage();
-        }
-        return resultado;
-    }
 }

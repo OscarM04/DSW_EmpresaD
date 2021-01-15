@@ -10,10 +10,6 @@ import java.util.List;
         @NamedQuery(
                 name = "obtenerUsuarioPorCorreo",
                 query = "select u from Usuario u where u.correo = :correo"
-        ),
-        @NamedQuery(
-                name = "obtener_analistas",
-                query = "select u from Usuario u where u.rol = 'analista' and u.activo=1"
         )
 })
 public class Usuario extends EntidadBase {
@@ -24,14 +20,12 @@ public class Usuario extends EntidadBase {
     @Column(name = "apellido")
     private String apellido;
 
-    @Column(name = "rol")
-    private String rol;
+    @Column(name = "password")
+    private String password;
 
     @Column(name = "correo")
     private String correo;
 
-    @Column(name = "estado")
-    private String estado;
 
     public Usuario(long id) {
         super(id);
@@ -56,20 +50,12 @@ public class Usuario extends EntidadBase {
         this.apellido = apellido;
     }
 
-    public String getRol() {
-        return rol;
+    public String getPassword() {
+        return password;
     }
 
-    public void setRol(String rol) {
-        this.rol = rol;
-    }
-
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getCorreo() {
