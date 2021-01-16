@@ -34,6 +34,7 @@ backend\.idea
 .history/*
 
 # Package Files #
+*/target/*
 *.jar
 *.war
 *.nar

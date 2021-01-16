@@ -6,25 +6,22 @@ import java.util.List;
 
 @Entity
 @Table( name = "usuario" )
-@NamedQueries({
-        @NamedQuery(
-                name = "obtenerUsuarioPorCorreo",
-                query = "select u from Usuario u where u.correo = :correo"
-        )
-})
 public class Usuario extends EntidadBase {
 
     @Column(name = "nombre")
-    private String nombre;
+    private String _nombre;
 
     @Column(name = "apellido")
-    private String apellido;
+    private String _apellido;
 
     @Column(name = "password")
-    private String password;
+    private String _password;
 
     @Column(name = "correo")
-    private String correo;
+    private String _correo;
+
+    @Column(name = "token")
+    private String _token;
 
 
     public Usuario(long id) {
@@ -34,35 +31,43 @@ public class Usuario extends EntidadBase {
     public Usuario() {
     }
 
-    public String getNombre() {
-        return nombre;
+    public String get_nombre() {
+        return _nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void set_nombre(String _nombre) {
+        this._nombre = _nombre;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String get_apellido() {
+        return _apellido;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void set_apellido(String _apellido) {
+        this._apellido = _apellido;
     }
 
-    public String getPassword() {
-        return password;
+    public String get_password() {
+        return _password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void set_password(String _password) {
+        this._password = _password;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String get_correo() {
+        return _correo;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void set_correo(String _correo) {
+        this._correo = _correo;
+    }
+
+    public String get_token() {
+        return _token;
+    }
+
+    public void set_token(String _token) {
+        this._token = _token;
     }
 }

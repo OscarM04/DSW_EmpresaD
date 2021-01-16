@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `practica`.`usuario` (
   `apellido` VARCHAR(25) NOT NULL,
   `correo` VARCHAR(60) NOT NULL,
   `password` VARCHAR(60) NOT NULL,
+  `token` VARCHAR(256),
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_usuario_UNIQUE` (`id` ASC) VISIBLE)
 ENGINE = InnoDB
